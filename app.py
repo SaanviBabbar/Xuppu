@@ -32,7 +32,7 @@ import uuid
 import logging
 
 from dotenv import load_dotenv
-from flask import Flask, jsonify, redirect, request
+from flask import Flask, jsonify, redirect, request, send_from_directory
 from flask_cors import CORS
 from werkzeug.exceptions import HTTPException
 
@@ -304,6 +304,29 @@ def goals_delete():
 def health():
     return _ok({"status": "alive", "message": "Xuppu is watching."})
 
+
+# Serve the frontend
+@app.route("/")
+def home():
+    return send_from_directory(".", "chaos.html")
+
+
+# CSS
+@app.route("/css/<path:filename>")
+def css_files(filename):
+    return send_from_directory("css", filename)
+
+
+# JavaScript
+@app.route("/js/<path:filename>")
+def js_files(filename):
+    return send_from_directory("js", filename)
+
+
+# Audio
+@app.route("/sounds/<path:filename>")
+def sound_files(filename):
+    return send_from_directory("sounds", filename)
 
 if __name__ == "__main__":
     scheduler.start_scheduler()
