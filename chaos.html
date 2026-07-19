@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Xuppu's Mockery Desk</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/deadmanswitch.css">
+
+</head>
+<body class="amb-0">
+<div class="chaos-layer" id="chaosLayer"></div>
+<div class="wrap">
+
+  <div class="masthead">
+    <div>
+      <h1>XUPPU<span>'S</span> MOCKERY DESK</h1>
+      <div class="tag">A goal tracker with zero chill</div>
+    </div>
+        <div class="masthead-controls">
+      <button id="audioToggle" class="btn small ghost" title="Toggle audio synthesizer">🔊 SOUND: ON</button>
+      <div class="burn-badge" id="burnBadge">🔥 0 burns delivered</div>
+    </div>
+  </div>
+
+  <!-- BOSS ARENA HUD -->
+  <div class="boss-hud" id="bossHud">
+    <div class="boss-header">
+      <span class="boss-title">💥 BOSS: XUPPU THE PROCRASTINATOR</span>
+      <span class="boss-phase" id="bossPhase">PHASE 1 (🙂)</span>
+    </div>
+    <div class="boss-hp-container">
+      <div class="boss-hp-fill" id="bossHpFill" style="width: 100%"></div>
+      <span class="boss-hp-text" id="bossHpText">HP: 100/100</span>
+    </div>
+    <div class="crit-overlay" id="critOverlay">CRITICAL HIT!</div>
+  </div>
+
+  <!-- PLAYER CARD -->
+  <div class="player-card" id="playerCard">
+    <div class="player-info">
+      <div class="player-row">
+        <span class="player-level" id="playerLevel">LV 1</span>
+        <span class="player-stage" id="playerStage">STAGE: Office</span>
+        <span class="player-bananas" id="playerBananas">🍌 0 Bananas</span>
+        <span class="player-streak" id="playerStreak" title="Daily milestone streak">🔥 0 day streak</span>
+      </div>
+      <div class="xp-bar-container">
+        <div class="xp-bar-fill" id="xpBarFill" style="width: 0%"></div>
+        <span class="xp-text" id="xpText">XP: 0/100</span>
+      </div>
+    </div>
+    <div class="combo-badge" id="comboBadge" style="display: none;">
+      <span class="combo-text" id="comboText">COMBO x1</span>
+      <div class="combo-time-bar">
+        <div class="combo-time-fill" id="comboTimeFill" style="width: 100%"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="boss-attack-banner" id="bossAttackBanner" style="display: none;">
+    ⚠️ WARNING: XUPPU IS PREPARING A BANANA BARRAGE! (5s)
+  </div>
+
+  <div class="stage">
+    <div class="stage-glow" id="stageGlow"></div>
+    <div class="stage-inner">
+      <div class="mascot-holder" id="mascotHolder"></div>
+      <div class="speech" id="speech">Loading Xuppu's opinions...</div>
+      <div class="stage-meta" id="stageMeta"></div>
+    </div>
+  </div>
+
+  <!-- RPG SIDEBARS / PANELS -->
+  <div class="game-row">
+    <!-- Daily Quests -->
+    <div class="game-panel quests-panel">
+      <h2>📜 TODAY'S CHALLENGES</h2>
+      <div class="quests-list" id="questsList">
+        <!-- Dyn contents -->
+      </div>
+    </div>
+
+    <!-- Banana Shop -->
+    <div class="game-panel shop-panel">
+      <h2>🍌 BANANA SHOP</h2>
+      <div class="shop-grid" id="shopGrid">
+        <!-- Dyn contents -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Achievements -->
+  <div class="game-panel achievements-panel">
+    <h2>🏆 ACHIEVEMENTS</h2>
+    <div class="achievements-grid" id="achievementsGrid">
+      <!-- Dyn contents -->
+    </div>
+  </div>
+
+  <!-- Statistics -->
+  <div class="game-panel stats-panel">
+    <h2>📊 STATISTICS</h2>
+    <div class="stats-grid" id="statsGrid">
+      <!-- Dyn contents -->
+    </div>
+  </div>
+
+  <div class="add-panel">
+    <h2>THROW A GOAL AT XUPPU</h2>
+    <div class="add-row">
+      <input type="text" id="goalTitle" placeholder="e.g. Finally learn to ollie" maxlength="60">
+      <input type="date" id="goalDeadline">
+      <select id="goalDifficulty" title="Difficulty">
+        <option value="easy">Easy</option>
+        <option value="medium" selected>Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+      <select id="goalCategory" title="Category">
+        <option value="study">📚 Study</option>
+        <option value="work">💼 Work</option>
+        <option value="fitness">💪 Fitness</option>
+        <option value="personal">🏠 Personal</option>
+        <option value="projects">🛠 Projects</option>
+      </select>
+      <button class="btn" id="addGoalBtn">ADD GOAL</button>
+    </div>
+  </div>
+
+  <div class="goals-head">
+    <h2>YOUR GOALS, UNDER REVIEW</h2>
+  </div>
+  <div id="goalGrid" class="goal-grid"></div>
+
+  <section class="game-panel">
+    <h2>☠️ DEAD MAN'S SWITCH</h2>
+
+    <p class="dms-description">
+        Fail your goal...
+        Xuppu posts an embarrassing tweet for you.
+    </p>
+
+    <div id="deadmansSwitchPanel">
+        Loading...
+    </div>
+  </section>
+
+  <footer>xuppu never sleeps. xuppu never forgets. xuppu is, unfortunately, right.</footer>
+</div>
+
+<!-- XUPPU INTERRUPTION -->
+<div id="xuppuInterrupt" class="interrupt hidden">
+    <div class="interruptBox">
+        <div id="interruptTitle">XUPPU HAS SOMETHING TO SAY</div>
+        <div id="interruptMessage"></div>
+    </div>
+</div>
+
+<!-- DEADLINE TAKEOVER (full viewport boss attack) -->
+<div id="deadlineTakeover" class="deadline-takeover hidden">
+  <div class="deadline-takeover-inner">
+    <div class="deadline-flash"></div>
+    <div class="deadline-countdown" id="deadlineCountdown">5</div>
+    <h2 class="deadline-title" id="deadlineTitle">⚠️ DEADLINE CHECK</h2>
+    <p class="deadline-msg" id="deadlineMessage">Every minute you're here, the deadline gets closer.</p>
+  </div>
+</div>
+
+<div id="confettiLayer" class="confetti-layer"></div>
+
+<script src="js/app.js"></script>
+<script src="js/deadmanswitch.js"></script>
+</body>
+</html>
+
+

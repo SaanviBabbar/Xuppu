@@ -1,0 +1,190 @@
+/* ==========================================================
+   DEAD MAN'S SWITCH
+========================================================== */
+
+.game-panel{
+    margin-top:32px;
+    background:rgba(255,255,255,.04);
+    border:2px solid rgba(255,80,80,.25);
+    border-radius:24px;
+    padding:28px;
+    box-shadow:
+        0 0 25px rgba(255,0,0,.08),
+        inset 0 0 25px rgba(255,0,0,.05);
+    position:relative;
+    overflow:visible;
+}
+
+.game-panel::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    background:
+    repeating-linear-gradient(
+        -45deg,
+        rgba(255,0,0,.03),
+        rgba(255,0,0,.03) 12px,
+        transparent 12px,
+        transparent 24px
+    );
+}
+
+.game-panel h2{
+    font-size:1.5rem;
+    color:#ff6565;
+    margin-bottom:10px;
+    text-shadow:0 0 12px rgba(255,70,70,.4);
+}
+
+.dms-description{
+    opacity:.75;
+    margin-bottom:24px;
+    line-height:1.6;
+}
+
+#deadmansSwitchPanel{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+
+
+
+.dms-goal-card{
+    background:#181818;
+    border:2px solid rgba(255,255,255,.08);
+    border-radius:18px;
+    padding:20px;
+    transition:.25s;
+}
+
+.dms-goal-card:hover{
+    transform:translateY(-3px);
+    border-color:#ff5858;
+    box-shadow:0 0 25px rgba(255,60,60,.18);
+}
+
+.dms-goal-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:18px;
+}
+
+.dms-goal-title{
+    font-weight:700;
+    font-size:1.15rem;
+}
+
+
+
+
+
+.dms-badge{
+    padding:6px 12px;
+    border-radius:999px;
+    font-size:.75rem;
+    font-weight:bold;
+}
+
+.dms-badge-armed{
+    background:#ff4444;
+    color:white;
+    animation:pulseArmed 1.4s infinite;
+}
+
+.dms-badge-disarmed{
+    background:#32c06d;
+    color:white;
+}
+
+.dms-badge-triggered{
+    background:#ff9a00;
+    color:white;
+}
+
+.dms-badge-failed{
+    background:#777;
+    color:white;
+}
+
+.dms-badge-none{
+    background:#444;
+    color:white;
+}
+
+
+
+
+.dms-countdown{
+    font-size:2rem;
+    font-weight:bold;
+    color:#ff4444;
+    text-align:center;
+    margin:18px 0;
+    font-family:monospace;
+    letter-spacing:2px;
+}
+
+
+
+.dms-tweet-preview{
+    background:#111;
+    color:#fff7e6;
+    border-left:5px solid #ff5050;
+    padding:16px;
+    border-radius:10px;
+    margin:15px 0;
+    font-style:italic;
+    line-height:1.5;
+    white-space:normal;
+    overflow-wrap:anywhere;
+    word-break:break-word;
+    height:auto;
+    min-height:72px;
+    display:block;
+}
+
+
+
+.dms-connect-row{
+    text-align:center;
+    padding:30px;
+}
+
+.dms-connect-btn{
+    margin-top:20px;
+    font-size:1rem;
+    padding:14px 26px;
+}
+
+
+
+.dms-preview-btn,
+.dms-arm-btn,
+.dms-disarm-btn{
+    width:100%;
+    margin-top:10px;
+}
+
+
+
+
+@keyframes pulseArmed{
+
+    0%{
+        box-shadow:0 0 0 rgba(255,0,0,.4);
+    }
+
+    50%{
+        box-shadow:0 0 20px rgba(255,0,0,.9);
+    }
+
+    100%{
+        box-shadow:0 0 0 rgba(255,0,0,.4);
+    }
+
+}
+
