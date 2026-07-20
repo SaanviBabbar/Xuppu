@@ -49,7 +49,7 @@ As deadlines approach:
 
 # 🙈 Features
 
-## 🎯 Goal Tracking
+## 𓃸 Goal Tracking
 
 - Create goals with deadlines
 - Track progress
@@ -99,7 +99,7 @@ XUPPU automatically posts the roast to your connected X account.
 
 ---
 
-## 🎮 Gamification
+## .✦ ݁˖🎮๋࣭₊ ⊹ Gamification
 
 - XP system
 - Boss fights
@@ -112,7 +112,7 @@ XUPPU automatically posts the roast to your connected X account.
 
 ---
 
-## 🎨 Interactive UI
+## °❀⋆.ೃ࿔*:･ Interactive UI
 
 - Animated mascot
 - Dynamic visual effects
@@ -123,7 +123,7 @@ XUPPU automatically posts the roast to your connected X account.
 
 ---
 
-# 🏗 Technical Architecture
+# </> Technical Architecture
 
 ```
                  User
@@ -148,7 +148,7 @@ XUPPU automatically posts the roast to your connected X account.
 
 ---
 
-# 🔄 Dead Man's Switch Workflow
+# 𝄃𝄃𝄂𝄂𝄀𝄁𝄃𝄂𝄂𝄃 Dead Man's Switch Workflow
 
 ```
 User creates goal
@@ -178,7 +178,7 @@ Disarm switch     Post roast to X
 
 ---
 
-# 🛠 Tech Stack
+# ๋࣭ ⭑✮💻₊ ⊹ Tech Stack
 
 ## Frontend
 
@@ -242,7 +242,7 @@ XUPPU
 
 ---
 
-# 🚀 Running Locally
+# 모 Running Locally
 
 Clone the repository
 
@@ -296,7 +296,7 @@ http://127.0.0.1:5000
 
 ---
 
-# 🔒 Security
+# ꗃ Security
 
 - OAuth 2.0 Authorization Code Flow
 - PKCE authentication
