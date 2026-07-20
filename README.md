@@ -1,4 +1,4 @@
-# ☠️ XUPPU – The Goal Tracker with Zero Chill
+# Ⴚ(●ტ●)Ⴢ XUPPU – The Goal Tracker with Zero Chill
 
 > *"Productivity is temporary. Public embarrassment is forever."*
 
@@ -20,13 +20,13 @@ Its flagship feature, the **Dead Man's Switch**, raises the stakes even further 
 
 ---
 
-## 🎯 The Problem
+## 🐵 The Problem
 
 Most productivity apps suffer from the same issue:
 
-- 📋 Static checklists
-- 📊 Passive progress bars
-- 🔔 Reminder notifications that users eventually ignore
+- Ⴚ(●ტ●)Ⴢ Static checklists
+- Ⴚ(●ტ●)Ⴢ Passive progress bars
+- Ⴚ(●ტ●)Ⴢ Reminder notifications that users eventually ignore
 
 Motivation fades over time, and existing tools rarely create any meaningful sense of urgency.
 
@@ -38,16 +38,16 @@ XUPPU introduces **gamified accountability**.
 
 As deadlines approach:
 
-- 🎭 Xuppu becomes increasingly sarcastic.
-- 🎨 Visual urgency intensifies through animations and effects.
-- 👾 Users battle bosses while progressing toward their goals.
-- 🍌 Completing tasks rewards XP, bananas, achievements, and progression.
-- ☠️ Users can activate a **Dead Man's Switch**, adding real consequences for procrastination.
+- @(･ェ･)@ Xuppu becomes increasingly sarcastic.
+- @(･ェ･)@ Visual urgency intensifies through animations and effects.
+- @(･ェ･)@ Users battle bosses while progressing toward their goals.
+- @(･ェ･)@ Completing tasks rewards XP, bananas, achievements, and progression.
+- @(･ェ･)@ Users can activate a **Dead Man's Switch**, adding real consequences for procrastination.
 <img width="1462" height="491" alt="image" src="https://github.com/user-attachments/assets/8d20bf09-d0be-43b8-901b-24d29b3449d9" />
 
 ---
 
-# ✨ Features
+# 🙈 Features
 
 ## 🎯 Goal Tracking
 
@@ -344,4 +344,4 @@ This project is licensed under the MIT License.
 
 ---
 
-⭐ If you enjoyed this project, consider giving it a star!
+🙉 If you enjoyed this project, consider giving it a star!
