@@ -95,7 +95,7 @@ If you fail...
 
 XUPPU automatically posts the roast to your connected X account.
 
-> **Note:** This repository currently uses a **Mock Twitter Client** for safe development and demonstrations.
+> **Note:** This repository currently uses a **Mock Twitter Client** for safe development and demonstrations. Please refer to version1 for full authentication.
 
 ---
 
